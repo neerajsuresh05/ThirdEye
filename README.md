@@ -22,10 +22,23 @@ This project bridges the informational gap left by traditional tools (like white
 
 ---
 
+## ⚠️ Important: Machine Learning Models Setup
+
+**CRITICAL:** Due to GitHub's strict file size limit of 100 MB, the heavy machine learning models required for this project are **not** included in this repository. You must download them manually before running the server.
+
+1. Download the `model.safetensors` file (approx. 940 MB) from [HuggingFace (Salesforce/blip-image-captioning-base)](https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/model.safetensors).
+2. Create a folder named `local_blip_model` inside your `ThirdEye_Django` directory (if it doesn't already exist).
+3. Place the downloaded file exactly here:
+   `ThirdEye_Django/local_blip_model/model.safetensors`
+
+*(Note: The YOLOv8 Nano weights will download automatically the first time you start the server).*
+
+---
+
 ## 💻 Backend Setup (Django Server)
 
 ### 1. Installation
-First, clone the repository and set up your Python virtual environment:
+Clone the repository and set up your Python virtual environment:
 ```bash
 git clone [https://github.com/neerajsuresh05/ThirdEye.git](https://github.com/neerajsuresh05/ThirdEye.git)
 cd ThirdEye/ThirdEye_Django
